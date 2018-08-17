@@ -4,3 +4,6 @@
 
 # 忽略 coding 文件夹
 coding/
+
+#忽略Pycode 文件夹
+pycode/
