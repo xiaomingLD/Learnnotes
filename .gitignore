@@ -1,2 +1,6 @@
+
 # pdf 阅读文档
 *.pdf
+
+# 忽略 coding 文件夹
+coding/
