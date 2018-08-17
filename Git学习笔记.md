@@ -67,3 +67,11 @@
 取回远程主机的更新后，可以在此基础上，创建新的分支 `git checkout -b newBrach origin/master`
 
 放弃修改 `git checkout .`
+
+### git 本地密码缓存问题
+
+~~~
+unable to access ' https://git.coding.net/xxxx/xxxx.git/ ': The requested URL returned error: 403
+~~~
+
+在clone远程仓库的时候，因为第一次在输入密码的时候，输入了错误的密码，但是系统自动记住了这个错误密码，导致每次clone输入的都是错误的密码，所以每次都会出现这个错误。解决办法可以在这个[链接里](https://www.jianshu.com/p/77b0340a02f3)得到。
