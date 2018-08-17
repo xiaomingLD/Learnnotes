@@ -1,0 +1,69 @@
+因此，多人协作的工作模式通常是这样：
+
+首先，可以试图用git push origin <branch-name>推送自己的修改；
+
+如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并；
+
+如果合并有冲突，则解决冲突，并在本地提交；
+
+没有冲突或者解决掉冲突后，再用git push origin <branch-name>推送就能成功！
+
+如果git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令git branch --set-upstream-to <branch-name> origin/<branch-name>。
+
+这就是多人协作的工作模式，一旦熟悉了，就非常简单。
+
+[Git 学习往网站](https://www.yiibai.com/git/git_basic_concepts.html)
+
+## 命令行
+
+### 账户设置
+
+初始化账户:
+
+`git config --global user.name "John Doe"`
+
+`git config --global user.email johndoe@example.com`
+
+检查配置 `git config --list`
+
+查看状态 `Git status`
+
+### git push 命令
+
+> git push 用于将本地分支的更新，推送到远程主机
+
+`git push <远程主机名> <本地分支名>`
+
+
+将当前分支推送到 origin 主机的对应分支 `git push origin`
+
+如果当前分支与多个主机存在追踪关系，可以使用 `-u` 选项选定一个默认主机，这样后面就可以不加任何参数使用 `git push`, 例如 `git push -u origin master` 将本地 master 分支推送到 origin 主机，同时指定 origin 为默认主机，以后再推送就不用再加任何参数了
+
+### git fetch 命令
+> 远程跟踪分支已更新（commit），需要将这些更新取回本地
+
+将某个远程主机的更新，全部取回本地 `git fetch`
+
+取回主机的某个分支 `git fetch <远程主机名> <分支名>` 例如 `git fetch origin <分支名>`
+
+### git merge 命令
+
+> git merge 用于将两个或两个以上的开发历史合并一起
+
+在当前分支上，合并 origin/master `git merge origin/master`
+
+### git branch 命令
+
+查看本地分支 `git branch`
+
+查看远程分支 `git branch -r`
+
+查看所有分支 `git branch -a`
+
+### git checkout 命令
+
+> git checkout 命令用于切换分支或恢复工作树文件
+
+取回远程主机的更新后，可以在此基础上，创建新的分支 `git checkout -b newBrach origin/master`
+
+放弃修改 `git checkout .`
