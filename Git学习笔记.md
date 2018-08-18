@@ -99,6 +99,6 @@ unable to access ' https://git.coding.net/xxxx/xxxx.git/ ': The requested URL re
 3. `git checkout <branch>` 切换到分支
 
 
-试一试
+> 别人对文档进行了修改，本地fetch后，必须加入 `git merge` 才能看到别人的修改
 
 再试一试
