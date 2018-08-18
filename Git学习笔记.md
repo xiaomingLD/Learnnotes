@@ -107,5 +107,6 @@ unable to access ' https://git.coding.net/xxxx/xxxx.git/ ': The requested URL re
 
 2. 修改好后，按下Esc (退出编辑状态)； 接着连按两次大写字母Z，你会惊喜的发现，终于保存好退出来了！
 
+> 查看远程仓库是不是有新的分支
 
-这是除了什么事情
+`git remote update origin`
