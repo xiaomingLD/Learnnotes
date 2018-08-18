@@ -28,6 +28,10 @@
 
 查看状态 `Git status`
 
+### git add 命令
+
+把所有add `git add .`
+
 ### git push 命令
 
 > git push 用于将本地分支的更新，推送到远程主机
