@@ -110,3 +110,7 @@ unable to access ' https://git.coding.net/xxxx/xxxx.git/ ': The requested URL re
 > 查看远程仓库是不是有新的分支
 
 `git remote update origin`
+
+> 删除远程仓库的一个分支
+
+`git push origin :<远程仓库分支名> `  远程仓库分支名前面的 ： 是删除的意思
