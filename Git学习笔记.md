@@ -56,6 +56,15 @@
 
 在当前分支上，合并 origin/master `git merge origin/master`
 
+讲一个分支合并到另一个分支的步骤：
+例如，将分支Samstag合并到分支daily上
+
+1. `git checkout daily` 切换到分支daily上
+
+2. `git merge samstag` 把samstag分支合并到当前分支daily上
+
+3. `git branch -d samstag` 删除分支samstag
+
 ### git branch 命令
 
 查看本地分支 `git branch`
@@ -81,3 +90,10 @@ unable to access ' https://git.coding.net/xxxx/xxxx.git/ ': The requested URL re
 ~~~
 
 在clone远程仓库的时候，因为第一次在输入密码的时候，输入了错误的密码，但是系统自动记住了这个错误密码，导致每次clone输入的都是错误的密码，所以每次都会出现这个错误。解决办法可以在这个[链接里](https://www.jianshu.com/p/77b0340a02f3)得到。
+
+
+> 一个人在本地建立了分支，并且推送到远程仓库，别的人并不能看到这个远程分支，这时候解决办法
+
+1. `git fetch` 命令更新remote索引
+2. `git branch -a` 查看所有分支
+3. `git checkout <branch>` 切换到分支
