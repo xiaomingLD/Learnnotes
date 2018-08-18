@@ -60,6 +60,8 @@
 
 查看所有分支 `git branch -a`
 
+从一个分支跳到另一个分支 `git checkout <branch>`
+
 ### git checkout 命令
 
 > git checkout 命令用于切换分支或恢复工作树文件
