@@ -288,4 +288,17 @@ char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
 
 C++ 基本的输入输出
 
-> 
+## C++ 数据结构
+
+> C++ 中的结构是一种用户自定义的可用的数据类型，它允许存储不同类型的数据项
+
+```
+struct type_name {
+member_type1 member_name1;
+member_type2 member_name2;
+member_type3 member_name3;
+.
+.
+} object_names;
+
+```
