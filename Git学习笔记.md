@@ -111,6 +111,11 @@ unable to access ' https://git.coding.net/xxxx/xxxx.git/ ': The requested URL re
 
 `git remote update origin`
 
+> 远程仓库的一个分支已被删除，但是本地还是可以看到远程有这个分支，怎么把？
+
+1. ` git remote show origin` 可以查看remote地址，远程分支情况
+2. `git remote prune origin` 可以删除本地远程不存在的分支
+
 > 删除远程仓库的一个分支
 
 `git push origin :<远程仓库分支名> `  远程仓库分支名前面的 ： 是删除的意思
