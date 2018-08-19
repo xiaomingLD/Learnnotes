@@ -335,3 +335,32 @@ member_type3 member_name3;
 > 保护成员 protected
 
 保护成员变量或函数与私有成员十分相似，但是，保护成员在子类中可以访问
+
+## C++ 继承
+
+继承允许我们依据一个类来定义一个类，这使得创建和维护一个应用程序变得容易，达到了重用代码功能和提高执行时间的效果
+
+继承代表了 is a 的关系
+
+一个类可以派生自多个类，这意味着，他可以从多个基类继承数据和函数
+
+
+## 继承的特点
+
+有public，protected，private三种继承，他们相应的改变了基类成员的访问属性
+
+* public 继承，基类 public 成员，protected 成员，private 成员的访问属性在派生类中分别变成：public, protected, private
+
+* protectd 继承： 基类 public 成员，protected 成员，private 成员的访问属性在派生类中分别变成：protected, protected, private
+
+* private 继承，基类 public 成员，protected 成员，private 成员的访问属性在派生类中分别变成：private, private, private
+
+一个派生类继承了所有的基类方法，下列情况除外：
+
+* 基类的构造函数、析构函数和拷贝构造函数
+* 基类的重载运算符
+* 基类的友元函数
+
+## C++ 重载运算符和重载函数
+
+重载声明是指一个与之前已经在该作用域内声明过得函数或者方法具有相同名称的声明，但是他们的参数列表和定义不相同
