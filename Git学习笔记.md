@@ -120,7 +120,6 @@ unable to access ' https://git.coding.net/xxxx/xxxx.git/ ': The requested URL re
 
 `git push origin :<远程仓库分支名> `  远程仓库分支名前面的 ： 是删除的意思
 
-
-`git merge --squash abc`
+> 把一个分支合并到另一个分支上，可以合并分支上的提交，然后再合并 `git merge --squash abc`
 
 `git commit`
