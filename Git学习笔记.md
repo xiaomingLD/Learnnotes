@@ -122,4 +122,9 @@ unable to access ' https://git.coding.net/xxxx/xxxx.git/ ': The requested URL re
 
 > 把一个分支合并到另一个分支上，可以合并分支上的提交，然后再合并 `git merge --squash abc`
 
+
+
 `git commit`
+
+把Notepad ++ 作为Git 的默认commit提交编辑器
+`git config --global core.editor "'D:\Notepad++\notepad++.exe' -multiInst -notabbar -nosession -noPlugin '$*'"`
