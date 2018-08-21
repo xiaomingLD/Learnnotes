@@ -116,6 +116,15 @@ unable to access ' https://git.coding.net/xxxx/xxxx.git/ ': The requested URL re
 1. ` git remote show origin` 可以查看remote地址，远程分支情况
 2. `git remote prune origin` 可以删除本地远程不存在的分支
 
-> 删除远程仓库的一个分支
+> g删除远程仓库的一个分支
 
 `git push origin :<远程仓库分支名> `  远程仓库分支名前面的 ： 是删除的意思
+
+> 把一个分支合并到另一个分支上，可以合并分支上的提交，然后再合并 `git merge --squash abc`
+
+
+
+`git commit`
+
+把Notepad ++ 作为Git 的默认commit提交编辑器
+`git config --global core.editor "'D:\Notepad++\notepad++.exe' -multiInst -notabbar -nosession -noPlugin '$*'"`
