@@ -83,48 +83,93 @@
 
 放弃修改 `git checkout .`
 
-### git 本地密码缓存问题
+### git 常见问题
+---
+> git 本地密码缓存问题
+
+git 会存储用户的用户名，储存方式有三种方式：
+
+* 缓存cache
+* 保存在硬盘store
+* 保存在钥匙串 osxkeychain
+
+如果第一次输入了错误的密码，系统会记住错误的密码，之后在拉取或者推送的时候会出现错误提示：
 
 ~~~
 unable to access ' https://git.coding.net/xxxx/xxxx.git/ ': The requested URL returned error: 403
 ~~~
 
-在clone远程仓库的时候，因为第一次在输入密码的时候，输入了错误的密码，但是系统自动记住了这个错误密码，导致每次clone输入的都是错误的密码，所以每次都会出现这个错误。解决办法可以在这个[链接里](https://www.jianshu.com/p/77b0340a02f3)得到。
+解决办法可以在这个[链接里](https://www.jianshu.com/p/77b0340a02f3)得到。
+
+1. 可以通过 `git help -a | grep credential` 命令查看系统支持的crendential
+
+2.  通过 `git config -- list` 查看自己的 git 的全局配置，其中可以看到 `credential.helper = ` 自己电脑中的配置
+
+解决办法：
+
+1. 清空配置
+
+找到 /Users/xxx/.gitconfig 文件，清除里面的 credential 命令， 清除之后可以通过 `git config credential.helper` 查看当前的credential是否已经被清空
+
+2. 一个电脑上可能存在多个.gitconfig文件，可以通过命令 `git config --show-origin --get credential.helper` 查看 credential.helper 所在的文件目录，找到配置文件后打开，进行步骤 1  的操作即可
+
+重新配置：
+
+* 配置成 store `git  config --global  credential.helper store`
 
 
+
+
+---
 > 一个人在本地建立了分支，并且推送到远程仓库，别的人并不能看到这个远程分支，这时候解决办法
 
 1. `git fetch` 命令更新remote索引
 2. `git branch -a` 查看所有分支
 3. `git checkout <branch>` 切换到分支
 
-
+---
 > 别人对文档进行了修改，本地fetch后，必须加入 `git merge` 才能看到别人的修改
 
+---
 > 一些情况下，自动跳入要求加备注的栏，不能退出
 
 1. 按 c 开始编辑
 
 2. 修改好后，按下Esc (退出编辑状态)； 接着连按两次大写字母Z，你会惊喜的发现，终于保存好退出来了！
 
+---
 > 查看远程仓库是不是有新的分支
 
 `git remote update origin`
 
+---
 > 远程仓库的一个分支已被删除，但是本地还是可以看到远程有这个分支，怎么把？
 
 1. ` git remote show origin` 可以查看remote地址，远程分支情况
 2. `git remote prune origin` 可以删除本地远程不存在的分支
 
-> g删除远程仓库的一个分支
+---
+> git 删除远程仓库的一个分支
 
 `git push origin :<远程仓库分支名> `  远程仓库分支名前面的 ： 是删除的意思
 
+---
 > 把一个分支合并到另一个分支上，可以合并分支上的提交，然后再合并 `git merge --squash abc`
 
 
+---
+> 把notepad++ 作为 `git commit` 的默认编辑器
 
-`git commit`
+`git config --global core.editor "'D:\Notepad++\notepad++.exe' -multiInst -notabbar -nosession -noPlugin '$*'"` 要注意改变程序地址 !!!
 
-把Notepad ++ 作为Git 的默认commit提交编辑器
-`git config --global core.editor "'D:\Notepad++\notepad++.exe' -multiInst -notabbar -nosession -noPlugin '$*'"`
+---
+> Git push 到远程仓库时不能推送，出现冲突，怎么解决
+
+1. `git fetch` 拉取远程分支
+2. `git merge`
+3. 会出现 conflict 命令，然后进入解决冲突模式
+4. 可以通过 `git checkout <文件路径加文件名> --ours` 命令保存自己的改动或者通过 `git checkout <文件路径加文件名> --theirs` 命令保存对方的
+5. git commit 提交
+6. git push 推送到远程仓库
+
+---
