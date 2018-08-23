@@ -5,6 +5,14 @@
 KPI（Key Performance Indicator）关键绩效指标法。是通过对组织内部流程的输入端、输出端的关键参数进行设置、取样、计算、分析，衡量流程绩效的一种目标式量化管理指标，是把企业的战略目标分解为可操作的工作目标的工具，是企业绩效管理的基础。
 
 
+> Error Function
+
+* RMSE
+* RMSE_p
+* MAE
+* STD
+
+
 > Measurement data are collected during test runs of predefined scenarios employing a hunter/target principle, i.e. the hunter(or ego vehicle) bracks the motion of a single target.
 
 
