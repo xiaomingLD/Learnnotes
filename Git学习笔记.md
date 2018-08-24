@@ -165,10 +165,11 @@ unable to access ' https://git.coding.net/xxxx/xxxx.git/ ': The requested URL re
 ---
 > Git push 到远程仓库时不能推送，出现冲突，怎么解决
 
-1. `git fetch` 拉取远程分支
-2. `git merge`
+1. `git fetch origin <分知名>` 拉取远程分支
+2. `git merge FETCH_HEAD`
 3. 会出现 conflict 命令，然后进入解决冲突模式
 4. 可以通过 `git checkout <文件路径加文件名> --ours` 命令保存自己的改动或者通过 `git checkout <文件路径加文件名> --theirs` 命令保存对方的
+5. git add .
 5. git commit 提交
 6. git push 推送到远程仓库
 
