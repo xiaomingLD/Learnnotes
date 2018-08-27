@@ -12,7 +12,6 @@ KPI（Key Performance Indicator）关键绩效指标法。是通过对组织内�
 * MAE
 * STD
 
-
 > Measurement data are collected during test runs of predefined scenarios employing a hunter/target principle, i.e. the hunter(or ego vehicle) bracks the motion of a single target.
 
 
