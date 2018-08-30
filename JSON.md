@@ -30,4 +30,25 @@ var xiaoming = {
 
 {"name":"小明","age":14,"gender":true,"height":1.65,"grade":null,"middle-school":"\"W3C\" Middle School","skills":["JavaScript","Java","Python","Lisp"]}
 
-## Python 中的 json 包
+---
+> Python 数据写入json文件中
+
+```
+import json
+
+with open("DataOigin.json", 'w') as f:
+    json.dump(dict,f)
+
+```
+
+---
+
+> json数据读取
+
+```
+import json
+
+with open("DataOigin.json", 'r') as f:
+    load_dict = json.load(f)
+
+```
