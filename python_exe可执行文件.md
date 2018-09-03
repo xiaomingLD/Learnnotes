@@ -23,3 +23,5 @@
                    scriptname [scriptname ...]
 
 ```
+
+[详细的文档请参考](https://pyinstaller.readthedocs.io/en/v3.3.1/usage.html)
