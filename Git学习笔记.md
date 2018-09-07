@@ -26,6 +26,12 @@
 
 检查配置 `git config --list`
 
+初始化 `git init`
+加入文件 `git add .`
+提交 `git commit -m "描述"`
+与远程连接 `git remote add origin https://github.com/xiaomingLD/jiaojie.git`
+上传 `git push origin master `
+
 查看状态 `Git status`
 
 ### git add 命令
