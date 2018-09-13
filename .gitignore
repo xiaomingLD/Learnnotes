@@ -11,3 +11,5 @@ pycode/
 # 忽略所有的 py 文件
 
 *.py
+
+cpluspluscode/
