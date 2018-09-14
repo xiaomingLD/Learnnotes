@@ -9,12 +9,11 @@ coding/
 pycode/
 
 # 忽略所有的 py 文件
-
 *.py
 
 
 # 忽略所有 C++ 练习代码
-cpluspluscode/
+C++/cpluspluscode/
 
 # 忽略所有 python 练习代码
-pythoncode/
+python/pythoncode/
