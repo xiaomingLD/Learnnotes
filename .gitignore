@@ -8,6 +8,10 @@ coding/
 #忽略Pycode 文件夹
 pycode/
 
+#忽略pycode文件夹
+
+python/pycode/
+
 # 忽略所有的 py 文件
 *.py
 

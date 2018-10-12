@@ -180,3 +180,21 @@ unable to access ' https://git.coding.net/xxxx/xxxx.git/ ': The requested URL re
 6. git push 推送到远程仓库
 
 ---
+
+---
+> 如何添加 SSH key
+
+1. 检查是否存在 SSH Key，通过命令
+
+`cd ~/.ssh`
+
+查看是否已存在 id_rsa.pub oder id_dsa.pub 文件，如果有，步骤 3， 如果没有，步骤 2
+
+
+2. 创建SSH key
+
+`ssh-keygen -t rsa -C "your_email@example.com"`
+
+一直回车就好，不需要设置密码
+
+3. 添加 SSH key 到 github 或者其他代码托管网站上
