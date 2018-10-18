@@ -180,25 +180,59 @@ Compiling Source Code
 > g++ 常用命令
 
 选项	选项描述
+
 -c	只对文件进行编译和汇编，但不进行连接，生成目标文件”.o”
+
 -S	只对文件进行编译，但不汇编和连接
+
 -E	只对文件进行预处理，但不编译汇编和连接
+
 -g	在可执行程序中包含标准调试信息
+
 -o file1 [file2]	将文件file1编译成可执行文件file2
+
 -v	打印出编译器内部编译各过程的命令行信息和编译器的版本
+
 -I dir	在头文件的搜索路径列表中添加dir目录
+
 -L dir	在库文件的搜索路径列表中添加dir目录
+
 -static	强制链接静态库
+
 -lNAME	连接名为libNAME的库文件
--Wall -W	开启GCC最常用的警告，GCC的warning一般格式为file:line-number:message
+
+-Wall -W	开启GCC最常用的警告，GCC的warning一般格
+式为file:line-number:message
+
 -pedantic	要求严格符合ANSI标准
+
 -Wconversion	开启隐式类型转换警告
+
 -Wshadow	开启同名变量函数警告
+
 -Wcast-qual	开启对特性移除的cast的警告，如const
+
 -O(-O1)	对编译出的代码进行优化
+
 -O2	进行比-O高一级的优化
+
 -O3	产生更高级别的优化
+
 -Os	产生最小的可执行文件
+
 -pg	开启性能测试，记录每个函数的调用次数与时长
+
 -ftest-coverage	记录每一行被执行的次数
+
 -fprofile-arcs	记录每个分支语句执行的频率
+
+
+> 文件权限与目录配置
+
+文件可存取的身份分为三个类别： owner or user/group/others
+
+拥有者/群组/
+
+`chgrp` 改变文件所属群组
+`chown` 改变文件拥有者
+`chmod` 改变文件的权限
