@@ -25,3 +25,12 @@
 ---------------------
 
 本文来自 hackbuteer1 的CSDN 博客 ，全文地址请点击：https://blog.csdn.net/Hackbuteer1/article/details/7558868?utm_source=copy
+
+
+# C++ virtual
+
+## virtual 继承
+
+虚继承的目的是令某个类作出声明，承诺愿意共享它的基类。共享的基类子对象称为虚基类
+
+## 析构函数 virtual 函数
