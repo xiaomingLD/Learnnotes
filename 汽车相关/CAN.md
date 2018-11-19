@@ -38,3 +38,46 @@
 * 采用 NRZ 和 位填充的位编码方式
 
 > 汽车总线的分类
+
+![汽车总线的分类](can8.PNG)
+
+> CAN 总线的应用
+
+![汽车总线的应用](can9.PNG)
+
+> CAN 2.0 版本
+
+![CAN 2.0 版本](can10.PNG)
+
+> 五种类型的帧
+
+* 数据帧
+
+用于发送单元向接收单元传输数据的帧
+
+* 远程帧
+
+用于接收单元向具有相同 ID 的发送单元请求数据的帧
+
+* 错误帧
+
+用于当检测出错误时，向其他单元通知错误的帧
+
+* 超载帧
+
+用于接收单元通知其尚未做好接收准备的帧
+
+* 帧间隔
+
+用于将数据帧及遥控帧与前面的帧分离开来的帧
+
+![CAN 数据帧](can11.PNG)
+
+DLC Data Length Code
+![CAN 数据帧](can12.PNG)
+
+> DBC 文件
+
+DBC 文件是用来描述 CAN 网络中
+
+DBC file is a proprietary format that describes the data over a CAN bus.
