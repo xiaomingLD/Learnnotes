@@ -74,3 +74,131 @@ ROS equivalent of stdout/stderr
 * roscore
 
 Master + rosout + parameter server (parameter server will be introduced later)
+
+
+# ROS
+
+* 分布式
+* 进程管理 进程 节点
+* 进程间通信
+
+分布式好处
+扩展性好，复用率高
+
+* Gazebo
+
+Slam
+
+## ROS 开发 IDE
+
+RoboWare
+
+RoboWare Studio
+
+ROS 工程结构
+
+catkin 用来编译ROS程序
+catkin 工作空间用来组织和管理功能包
+
+> CMakeLists.txt
+
+规定catkin编译的规则 例如：源文件，依赖项，目标文件
+
+> package.xml
+
+定义package的属性
+
+自定义通信格式
+消息 message
+
+> Metapackage
+
+他依赖了很多其他的软件包， Stack 功能包集
+
+> ROS 通信架构
+
+Master
+
+管理进程，节点管理器，管理节点之间的通信
+
+roscore: 节点管理器
+rosout 日志输出 系统有什么输出
+parameter server 参数服务器
+
+
+> 通信方式
+
+* Topic
+* Service
+* Parameter Service
+* Actionlib
+
+
+
+> Topic 异步通信方式
+
+ROS中的异步通讯方式
+Node 通过 publish-subscribe机制通信
+
+异步
+
+Message，topic内容的数据类型  类的概念 定义在 *.msg 文件中
+
+基本msg包括
+bool，int8， int16，int32，int64
+
+> Service 同步通信方式
+
+
+ srv 
+
+Service 通信的数据格式，定义在 *.srv 文件中
+
+ Parameter Server
+
+> Action
+
+当一个过程执行时间太长时，长时间的任务，可抢占的任务
+
+*.action 文件
+
+工具
+仿真 Gazebo
+
+
+## Client Library
+提供ROS编程的库，CLient Library 类似API
+
+
+roscpp 执行效率很高
+
+topic，service，param，timer的接口
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
